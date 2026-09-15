@@ -61,11 +61,14 @@
     <caption>Jammers 👊</caption>
     <tr>
         <th>Player</th>
+        <th class="ocl-num">Points</th>
     </tr>
     {{ range $e := $jammers }}
         {{ $playerID := $e.id }}
+        {{ $player := $e.player}}
         <tr>
             <td>{{ with index $playerDirectory $playerID }}{{ .discord_nickname }}{{ else }}{{ $playerID }}{{ end }}</td>
+            <td class="ocl-num">{{ $player.standings.points }}</td>
         </tr>
     {{ end }}
 </table>

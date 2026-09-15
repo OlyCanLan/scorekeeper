@@ -6,8 +6,6 @@ title: Olympia Canadian Highlander League
 
 The **Olympia Canadian Highlander League** is an Olympia WA region, Discord-run, league for the [Canadian Highlander](https://canadianhighlander.ca/) format of Magic: The Gathering. The goal of this league is to enjoy and grow local interest in the Canadian Highlander format, while providing a simple to engage with league system that encourages creativity, competitiveness, and community.
 
-Discord link: https://discord.gg/eV5NF5BG4E
-
 <div class="ocl-card-grid">
     <a class="ocl-card" target="_blank" href="https://discord.gg/eV5NF5BG4E">
         <h3>🟪 OlyCanLan Discord Server</h3>
