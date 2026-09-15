@@ -1,0 +1,5 @@
+{{/* Site override of the theme's head-additions.html hook point.
+     Adds our header background-image stylesheet, then preserves the
+     theme's own "head-end" hook so other extensions still work. */}}
+<link rel="stylesheet" href="{{ "css/header-bg.css" | relURL }}">
+{{- partials.Include "hook.html" (dict "hook" "head-end" "context" .) -}}

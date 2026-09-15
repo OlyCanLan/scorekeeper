@@ -1,6 +1,6 @@
 baseURL = 'https://www.olycanlan.org/'
 locale = 'en-us'
-title = 'Olympia Canadian Highlander League'
+title = '🍁Olympia Canadian Highlander League🍁'
 theme = 'ananke'
 
 [markup]
@@ -31,11 +31,6 @@ theme = 'ananke'
         name = "Home"
         url = "/"
         weight = 1
-    [[menu.main]]
-        identifier = "format"
-        name = "Canadian Highlander"
-        url = "https://canadianhighlander.ca/"
-        weight = 2
     [[menu.main]]
         identifier = "standings"
         name = "Standings"

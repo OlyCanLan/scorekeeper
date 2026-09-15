@@ -13,8 +13,8 @@ Discord link: https://discord.gg/eV5NF5BG4E
         <h3>🟪 OlyCanLan Discord Server</h3>
         <p>Join the Discord server to sign up for the league and meet the other players!</p>
     </a>
-    <a class="ocl-card" href="https://canadianhighlander.ca/about/">
-        <h3>🎴 Canadian Highlander</h3>
+    <a class="ocl-card" target="_blank" href="https://canadianhighlander.ca/about/">
+        <h3>🍁 Canadian Highlander</h3>
         <p>New to the format? Review the information on the official format website.</p>
     </a>
     <a class="ocl-card" href="/standings/">

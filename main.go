@@ -2237,7 +2237,7 @@ func main() {
 					//If the match was a bounty, winner gets 3 points, loser gets 1. If not, winner gets 1, loser gets 0
 					if matchData["bounty"].(bool) {
 						wPoints += 3
-						lPoints += 1
+						lPoints += 2
 					} else {
 						wPoints += 1
 					}

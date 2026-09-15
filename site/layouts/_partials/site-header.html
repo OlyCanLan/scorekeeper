@@ -1,0 +1,13 @@
+{{/* Site override of the theme's site-header.html, which is used only on
+     the homepage (every other page uses page-header.html instead, which
+     never shows this big title). The theme's default here unconditionally
+     renders a large <h1> with the site title on top of the header — there's
+     no front-matter flag to turn it off like there is for single pages.
+     We drop it so the homepage banner matches the compact, text-free
+     header already used everywhere else, leaving just the nav bar
+     (and its background image, applied separately via css/header-bg.css). */}}
+<header>
+  <div class="{{ .Site.Params.background_color_class | compare.Default "bg-black" }}">
+    {{ partials.Include "site-navigation.html" . }}
+  </div>
+</header>

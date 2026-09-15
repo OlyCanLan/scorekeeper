@@ -182,9 +182,21 @@ code.ocl-cmd {
 
 main .mw7,
 main .mw8 {
-    max-width: 85rem; /* ~1200px; raise further or use 100% for edge-to-edge */
+    max-width: 90rem; /* ~1200px; raise further or use 100% for edge-to-edge */
 }
 
 main .measure-wide {
-    max-width: 85rem;
+    max-width: 90rem;
+}
+
+/* Tighten the vertical padding Tachyons' pv3 gives the nav bar */
+header nav.pv3 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Shrink the site title text (default Tachyons f3 is ~1.5rem) */
+header nav a.f3 {
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
 }
