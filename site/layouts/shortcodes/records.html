@@ -13,13 +13,12 @@
 
 {{ $rows = sort $rows "player.historical_record.wins" "desc" }}
 {{ $rows = sort $rows "winPct" "desc" }}
-
+<br>
 <p class="ocl-note">All-time league records across every completed season. Sorted by win percentage, then total wins.</p>
 
 <div class="ocl-table-wrap">
 <table class="ocl-table">
     <tr>
-        <th>#</th>
         <th>Player</th>
         <th class="ocl-num">Record</th>
         <th class="ocl-num">Win %</th>
@@ -31,13 +30,6 @@
         {{ $player := $e.player }}
         {{ $hist := $player.historical_record }}
         <tr>
-            <td>
-                {{ $rank := add $i 1 }}
-                {{ if eq $rank 1 }}<span class="ocl-rank ocl-rank-1">🥇</span>
-                {{ else if eq $rank 2 }}<span class="ocl-rank ocl-rank-2">🥈</span>
-                {{ else if eq $rank 3 }}<span class="ocl-rank ocl-rank-3">🥉</span>
-                {{ else }}<span class="ocl-rank">{{ $rank }}</span>{{ end }}
-            </td>
             <td>{{ $player.discord_nickname }}</td>
             <td class="ocl-num">{{ $hist.wins }}-{{ $hist.losses }}</td>
             <td class="ocl-num">{{ printf "%.1f" $e.winPct }}%</td>

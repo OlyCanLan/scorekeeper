@@ -3,6 +3,28 @@ locale = 'en-us'
 title = 'Olympia Canadian Highlander League'
 theme = 'ananke'
 
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+
+# Pages under content/pages/*.md are served at clean root URLs
+# (e.g. content/pages/standings.md -> /standings/) to match the menu above.
+[permalinks]
+    pages = "/:contentbasename/"
+
+# Site-wide description used for meta tags
+[params]
+    description = "Home of the Olympia Canadian Highlander League (OlyCanLan) — season standings, player records, decklists, and everything you need to battle."
+    mainSections = ["posts"]
+
+    [params.ananke]
+        custom_css = ["custom.css"]
+
+        [params.ananke.home]
+            content_alignment = "left"
+            show_recent_posts = false
+
 [menu]
     [[menu.main]]
         identifier = "home"
@@ -10,12 +32,28 @@ theme = 'ananke'
         url = "/"
         weight = 1
     [[menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about/"
+        identifier = "format"
+        name = "Canadian Highlander"
+        url = "https://canadianhighlander.ca/"
         weight = 2
     [[menu.main]]
-        identifier = "scoreboard"
-        name = "Scoreboard"
-        url = "/scoreboard/"
+        identifier = "standings"
+        name = "Standings"
+        url = "/standings/"
         weight = 3
+    [[menu.main]]
+        identifier = "records"
+        name = "Player Records"
+        url = "/records/"
+        weight = 4
+    [[menu.main]]
+        identifier = "decklists"
+        name = "Decklists"
+        url = "/decklists/"
+        weight = 5
+    [[menu.main]]
+        identifier = "commands"
+        name = "Bot Commands"
+        url = "/commands/"
+        weight = 6
+

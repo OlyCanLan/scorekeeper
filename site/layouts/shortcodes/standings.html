@@ -19,6 +19,7 @@
 {{ $battlers = sort $battlers "player.standings.points" "desc" }}
 
 <p class="ocl-note">
+    <br>
     Season {{ $meta.season }} &middot; Round {{ $meta.current_round }} of {{ $meta.total_rounds }}
     {{ if $meta.signups }} &middot; Signups are currently <strong>open</strong>{{ end }}
 </p>
@@ -30,9 +31,7 @@
         <th>#</th>
         <th>Player</th>
         <th class="ocl-num">Record</th>
-        <th class="ocl-num">Game W-L</th>
         <th class="ocl-num">Points</th>
-        <th>Decklist</th>
     </tr>
     {{ range $i, $e := $battlers }}
         {{ $playerID := $e.id }}
@@ -50,18 +49,7 @@
                 {{ if $player.received_bye }}<span class="ocl-pill ocl-pill-gray" title="Received a bye this season">BYE</span>{{ end }}
             </td>
             <td class="ocl-num">{{ $player.standings.wins }}-{{ $player.standings.losses }}</td>
-            <td class="ocl-num">{{ $player.standings.game_wins }}-{{ $player.standings.game_losses }}</td>
             <td class="ocl-num">{{ $player.standings.points }}</td>
-            <td>
-                {{ if $player.decklist.approved }}
-                    <a href="{{ $player.decklist.url }}" target="_blank" rel="noopener">{{ $player.decklist.name | default "View" }}</a>
-                    <span class="ocl-pill ocl-pill-green">Approved</span>
-                {{ else if ne $player.decklist.url "Not Submitted" }}
-                    <span class="ocl-pill ocl-pill-gold">Pending Review</span>
-                {{ else }}
-                    <span class="ocl-pill ocl-pill-red">Not Submitted</span>
-                {{ end }}
-            </td>
         </tr>
     {{ end }}
 </table>
@@ -73,13 +61,11 @@
     <caption>Jammers 👊</caption>
     <tr>
         <th>Player</th>
-        <th>Status</th>
     </tr>
     {{ range $e := $jammers }}
         {{ $playerID := $e.id }}
         <tr>
             <td>{{ with index $playerDirectory $playerID }}{{ .discord_nickname }}{{ else }}{{ $playerID }}{{ end }}</td>
-            <td><span class="ocl-pill ocl-pill-gray">Casual / Non-competitive</span></td>
         </tr>
     {{ end }}
 </table>
