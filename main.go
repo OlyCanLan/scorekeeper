@@ -604,6 +604,93 @@ func replyEphemeralDeferred(s *discordgo.Session, i *discordgo.InteractionCreate
 	)
 }
 
+// Builds the season-open announcement embed, including a live snapshot of
+// who's currently signed up. Used both for the initial post and for every
+// later edit when someone signs up or drops.
+func buildSignupEmbed(seasonNum float64, startDate time.Time) *discordgo.MessageEmbed {
+	botData.Mutex.Lock()
+	seasonPlayers := botData.Season["season_players"].(map[string]interface{})
+
+	var battlers, jammers []string
+	for id, player := range seasonPlayers {
+		p := player.(map[string]interface{})
+		if dropped, _ := p["dropped"].(bool); dropped {
+			continue
+		}
+		if active, _ := p["active"].(bool); !active {
+			continue
+		}
+		switch p["role"].(string) {
+		case "battler":
+			battlers = append(battlers, fmt.Sprintf("<@%s>", id))
+		case "jammer":
+			jammers = append(jammers, fmt.Sprintf("<@%s>", id))
+		}
+	}
+	botData.Mutex.Unlock()
+
+	battlerList := "*No one yet*"
+	if len(battlers) > 0 {
+		battlerList = strings.Join(battlers, "\n")
+	}
+	jammerList := "*No one yet*"
+	if len(jammers) > 0 {
+		jammerList = strings.Join(jammers, "\n")
+	}
+
+	return &discordgo.MessageEmbed{
+		Title:       "🍁⚔️ Olympia Canadian Highlander League Signups Are Now OPEN! 👊🍁",
+		Description: fmt.Sprintf("Season %v", seasonNum),
+		Color:       0xD80621, // Canadian Flag Red 🍁
+		Fields: []*discordgo.MessageEmbedField{
+			{
+				Value: fmt.Sprintf(
+					"Welcome to Olympia Canlander Season %v.\n"+
+						"The league will begin on %v. \n\n"+
+						"📝 | Signup using `/signup battler` or `/signup jammer`. Battlers must submit their decklist before the season begins.\n\n"+
+						"📖 | [RULES](https://bot.olycanlan.org/) | You can find the full rules for this season here on the website.\n",
+					seasonNum,
+					startDate.Format("January 2, 2006"),
+				),
+				Inline: false,
+			},
+			{Name: "Battlers ⚔️", Value: battlerList, Inline: true},
+			{Name: "Jammers 👊", Value: jammerList, Inline: true},
+		},
+	}
+}
+
+// Re-renders the signup embed and edits the live announcement message in
+// place. No-ops quietly if no season-open message has been recorded yet
+// (e.g. signups aren't open, or it's an old season from before this existed).
+func updateSignupEmbed(s *discordgo.Session) {
+	botData.Mutex.Lock()
+	metaData := botData.Metadata["current_season"].(map[string]interface{})
+	msgID, ok := metaData["signup_message_id"].(string)
+	seasonNum := metaData["season"].(float64)
+	startDateRaw, _ := metaData["start_date"].(string)
+	botData.Mutex.Unlock()
+
+	if !ok || msgID == "" {
+		return
+	}
+
+	startDate, err := time.Parse(time.RFC3339, startDateRaw)
+	if err != nil {
+		return
+	}
+
+	embeds := []*discordgo.MessageEmbed{buildSignupEmbed(seasonNum, startDate)}
+	_, err = s.ChannelMessageEditComplex(&discordgo.MessageEdit{
+		Channel: os.Getenv("SEASON_CHNL_ID"),
+		ID:      msgID,
+		Embeds:  &embeds,
+	})
+	if err != nil {
+		log.Printf("Error updating signup embed: %v", err)
+	}
+}
+
 // function for role check for slash commands.
 // returns true if role is met, false if not.
 func memberHasRole(member *discordgo.Member, allowedRoles []string) bool {
@@ -1028,9 +1115,10 @@ func main() {
 
 				//Add battler role
 				s.GuildMemberRoleAdd(i.GuildID, i.Member.User.ID, os.Getenv("BATTLER_ID"))
-
+				updateSignupEmbed(s)
 				//Respond with an ephemeral message
 				replyEphemeral(s, i, "Thanks for signing up as a Battler ⚔️ for this season!\n**Please use the `/signup decklist` command to provide your decklist before the season starts.**")
+
 			// /signup jammer
 			case "jammer":
 
@@ -1149,7 +1237,7 @@ func main() {
 
 				//Add jammer role
 				s.GuildMemberRoleAdd(i.GuildID, i.Member.User.ID, os.Getenv("JAMMER_ID"))
-
+				updateSignupEmbed(s)
 				//Respond with an ephemeral message
 				replyEphemeral(s, i, "Thanks for signing up as a Jammer 👊 for this season!")
 
@@ -1371,6 +1459,7 @@ func main() {
 					os.Getenv("ADMIN_CHNL_ID"),
 					fmt.Sprintf("<@&%v>\n<@%v> has self-dropped as a %v for the current season.\n**Reason:** *%v*", os.Getenv("ORGANIZER_ID"), i.Member.User.ID, roleName, dropReason),
 				)
+				updateSignupEmbed(s)
 
 				return
 			}
@@ -1703,36 +1792,16 @@ func main() {
 				displayDate := startDate.Format("January 2, 2006")
 
 				//Make league opening announcement embed msg
-				embed := &discordgo.MessageEmbed{
-					Title:       "🍁⚔️ Olympia Canadian Highlander League Signups Are Now OPEN! 👊🍁",
-					Description: fmt.Sprintf("Season %v", newSeasonNum),
-					Fields: []*discordgo.MessageEmbedField{
-						{
-							Value: fmt.Sprintf(
-								"Welcome to Olympia Canlander Season %v.\n"+
-									"The league will begin on %v. \n\n"+
-									"📝 | Signup using `/signup battler` or `/signup jammer`. Battlers must submit their decklist before the season begins.\n\n"+
-									"📖 | [RULES](https://bot.olycanlan.org/) | You can find the full rules for this season here on the website.\n",
-								newSeasonNum,
-								displayDate,
-							),
-							Inline: true,
-						},
-					},
-					Color: 0xD80621, // Canadian Flag Red 🍁
-				}
+				embed := buildSignupEmbed(newSeasonNum, startDate)
 
 				//Post announcement
-				_, err_announce := s.ChannelMessageSendComplex(
+				msg, err_announce := s.ChannelMessageSendComplex(
 					os.Getenv("SEASON_CHNL_ID"),
-
 					&discordgo.MessageSend{
 						Content: "@everyone",
-
 						Embeds: []*discordgo.MessageEmbed{
 							embed,
 						},
-
 						AllowedMentions: &discordgo.MessageAllowedMentions{
 							Parse: []discordgo.AllowedMentionType{
 								discordgo.AllowedMentionTypeEveryone,
@@ -1745,6 +1814,12 @@ func main() {
 					log.Printf("Error making League Opening Announcement: %v\n", err_announce)
 					return
 				}
+
+				// Remember the message so later signups/drops can live-update it
+				botData.Mutex.Lock()
+				metaData["signup_message_id"] = msg.ID
+				_ = saveMetadata()
+				botData.Mutex.Unlock()
 
 			}
 		case "round":
@@ -2899,7 +2974,7 @@ func main() {
 						os.Getenv("ADMIN_CHNL_ID"),
 						fmt.Sprintf("<@&%v>\n<@%v> has been admin-dropped as a %v for the current season.", os.Getenv("ORGANIZER_ID"), player.ID, roleName),
 					)
-
+					updateSignupEmbed(s)
 					return
 				}
 			case "player-points": //Manually modifies points of a specified player
