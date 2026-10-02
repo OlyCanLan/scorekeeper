@@ -18,12 +18,12 @@ Everything on this site is generated from the same data our Discord bot uses to 
     <tr>
         <td><code class="ocl-cmd">/signup battler</code></td>
         <td>Anyone (while signups are open)</td>
-        <td>Registers you as a Battler ⚔️ for the current season and assigns the role.</td>
+        <td>Registers you as a Battler ⚔️ for the current season.</td>
     </tr>
     <tr>
         <td><code class="ocl-cmd">/signup jammer</code></td>
         <td>Anyone</td>
-        <td>Registers you as a Jammer 👊 for the current season — casual play, no ranked pairings.</td>
+        <td>Registers you as a Jammer 👊 for the current season.</td>
     </tr>
     <tr>
         <td><code class="ocl-cmd">/signup decklist</code></td>
@@ -43,12 +43,5 @@ Everything on this site is generated from the same data our Discord bot uses to 
 </table>
 </div>
 
-<!--
-NOTE TO SELF: if you want, add a short blurb here about bounty matches specifically —
-what makes a match a "bounty" in our league, and why it matters — since the /result
-command asks about it but this page doesn't currently explain the concept itself.
--->
-
 ## Questions?
-
-If a command isn't behaving the way you expect, or you're missing a role you think you should have, ping an organizer in the server.
+If a command isn't behaving the way you expect, or you're missing a role you think you should have, post in the bot-bugs channel in discord!
