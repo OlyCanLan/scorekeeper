@@ -1,6 +1,6 @@
 {
-    "metadata": {
-        "last_updated": ""
+    "archive": {
+        "matches": {}
     },
     "current_season": {
         "matches": {},
@@ -8,7 +8,7 @@
             "next_match_id": 1
         }
     },
-    "archive": {
-        "matches": {}
+    "metadata": {
+        "last_updated": "2026-10-02T16:12:05Z"
     }
 }
