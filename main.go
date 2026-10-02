@@ -592,6 +592,18 @@ func replyEphemeral(s *discordgo.Session, i *discordgo.InteractionCreate, messag
 	)
 }
 
+// Like replyEphemeral, but for use after the interaction has already been
+// deferred with InteractionResponseDeferredChannelMessageWithSource.
+// Edits the deferred response instead of sending an initial one.
+func replyEphemeralDeferred(s *discordgo.Session, i *discordgo.InteractionCreate, message string) {
+	s.InteractionResponseEdit(
+		i.Interaction,
+		&discordgo.WebhookEdit{
+			Content: &message,
+		},
+	)
+}
+
 // function for role check for slash commands.
 // returns true if role is met, false if not.
 func memberHasRole(member *discordgo.Member, allowedRoles []string) bool {
@@ -1462,6 +1474,17 @@ func main() {
 				replyEphemeral(s, i, fmt.Sprintf("Signups for the current league have been closed!\n\n**Battlers ⚔️:** %d | **Jammers 👊:** %d | **Total Rounds:** %v", activeBattlers, activePlayers-activeBattlers, metaData["total_rounds"].(float64)))
 
 			case "new-season":
+				// Acknowledge immediately. This command fetches/updates every guild
+				// member's roles and can take well over Discord's 3-second response
+				// window, so we defer first and edit the response once done.
+
+				s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
+					Type: discordgo.InteractionResponseDeferredChannelMessageWithSource,
+					Data: &discordgo.InteractionResponseData{
+						Flags: discordgo.MessageFlagsEphemeral,
+					},
+				})
+
 				//Read metadata for if league signups are open
 				botData.Mutex.Lock()
 				metaData := botData.Metadata["current_season"].(map[string]interface{})
@@ -1470,7 +1493,7 @@ func main() {
 
 				if signupStatus {
 					//Reply and say that they are already open
-					replyEphemeral(s, i, "The current league is already open.\nThe current league season must be closed (`/league close-signups`) before a new season can begin.\nCarry on 🍁")
+					replyEphemeralDeferred(s, i, "The current league is already open.\nThe current league season must be closed (`/league close-signups`) before a new season can begin.\nCarry on 🍁")
 					botData.Mutex.Unlock()
 					return
 				}
@@ -1486,7 +1509,7 @@ func main() {
 				startDate, err := time.Parse("01-02-2006", inputDate)
 				if err != nil {
 					//Send hidden command to resend with correct date formatting
-					replyEphemeral(s, i, fmt.Sprintf("Your submitted date `%v` was not in the correct MM-DD-YYYY format", inputDate))
+					replyEphemeralDeferred(s, i, fmt.Sprintf("Your submitted date `%v` was not in the correct MM-DD-YYYY format", inputDate))
 
 					//unlock data before evacuating
 					botData.Mutex.Unlock()
@@ -1673,7 +1696,7 @@ func main() {
 				}
 
 				//Reply with a hidden message that the league is now open
-				replyEphemeral(s, i, fmt.Sprintf("Olympia Canlander Season %v is now open!\nAn announcement will be posted in <#%v>", newSeasonNum, os.Getenv("SEASON_CHNL_ID")))
+				replyEphemeralDeferred(s, i, fmt.Sprintf("Olympia Canlander Season %v is now open!\nAn announcement will be posted in <#%v>", newSeasonNum, os.Getenv("SEASON_CHNL_ID")))
 
 				//format a display date
 				//NOT NECESSARY BUT KEEPING FOR NOW -> location, _ := time.LoadLocation("America/Los_Angeles")
@@ -1689,7 +1712,7 @@ func main() {
 								"Welcome to Olympia Canlander Season %v.\n"+
 									"The league will begin on %v. \n\n"+
 									"📝 | Signup using `/signup battler` or `/signup jammer`. Battlers must submit their decklist before the season begins.\n\n"+
-									"📖 | [RULES](https://docs.google.com/document/d/1RZqrqEkHq-7VvKPMwbnqLxN6dfciJkXXuS5MKVr-KNI/edit?usp=sharing) | You can find the full rules for this season here or by typing the `!rules`.\n",
+									"📖 | [RULES](https://bot.olycanlan.org/) | You can find the full rules for this season here on the website.\n",
 								newSeasonNum,
 								displayDate,
 							),
