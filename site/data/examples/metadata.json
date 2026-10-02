@@ -4,9 +4,9 @@
         "battlers": 0,
         "current_round": 0,
         "season": 8,
-        "signups": false,
-        "start_date": "",
-        "total_rounds": 0
+        "signups": true,
+        "start_date": "2026-06-03T00:00:00Z",
+        "total_rounds": 4
     },
     "league": {
         "format": "Canadian Highlander",

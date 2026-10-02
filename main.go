@@ -1448,7 +1448,7 @@ func main() {
 					roundsNeeded := math.Ceil(math.Log2(float64(activeBattlers))) // Total Rounds Needed: Log2(#battlers) ROUNDED UP
 					metaData["total_rounds"] = float64(roundsNeeded)
 				} else {
-					metaData["total_rounbds"] = float64(0)
+					metaData["total_rounds"] = float64(0)
 				}
 
 				//Write back to the JSON data
@@ -1755,7 +1755,7 @@ func main() {
 
 				if currentRound == seasonMeta["total_rounds"] { //No need to make a new round if we are already on final round
 					replyEphemeral(s, i, "The bot's records show that an additional round is not needed. Carry on 🍁!")
-					botData.Mutex.Lock()
+					botData.Mutex.Unlock()
 					return
 				}
 
@@ -1766,7 +1766,7 @@ func main() {
 
 					if roundStatus != "completed" { // Cannot generate a new round without completing the previous round
 						replyEphemeral(s, i, fmt.Sprintf("Round %v has not been completed in the bot's data.\nPlease use `/round close` to finalize the previous round.", currentRound))
-						botData.Mutex.Lock()
+						botData.Mutex.Unlock()
 						return
 					}
 				}
@@ -1996,7 +1996,7 @@ func main() {
 				err_load := loadSeason()
 				if err_load != nil {
 					log.Println("Error loading season data during round post")
-					botData.Mutex.Lock()
+					botData.Mutex.Unlock()
 					return
 				}
 
@@ -2220,7 +2220,7 @@ func main() {
 				}
 
 				//Accumulate points via the following
-				// BOUNTY match -> Winner +3, Loser +1 (INCLUDES BYE)
+				// BOUNTY match -> Winner +3, Loser +2 (INCLUDES BYE)
 				// NON-BOUNTY match -> Winner +1, Loser +0
 				// First match against unique OPP -> +3
 

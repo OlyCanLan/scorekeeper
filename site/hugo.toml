@@ -42,13 +42,8 @@ theme = 'ananke'
         url = "/records/"
         weight = 4
     [[menu.main]]
-        identifier = "decklists"
-        name = "Decklists"
-        url = "/decklists/"
-        weight = 5
-    [[menu.main]]
         identifier = "commands"
         name = "Bot Commands"
         url = "/commands/"
-        weight = 6
+        weight = 5
 
