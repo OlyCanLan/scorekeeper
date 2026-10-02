@@ -1787,10 +1787,6 @@ func main() {
 				//Reply with a hidden message that the league is now open
 				replyEphemeralDeferred(s, i, fmt.Sprintf("Olympia Canlander Season %v is now open!\nAn announcement will be posted in <#%v>", newSeasonNum, os.Getenv("SEASON_CHNL_ID")))
 
-				//format a display date
-				//NOT NECESSARY BUT KEEPING FOR NOW -> location, _ := time.LoadLocation("America/Los_Angeles")
-				displayDate := startDate.Format("January 2, 2006")
-
 				//Make league opening announcement embed msg
 				embed := buildSignupEmbed(newSeasonNum, startDate)
 
