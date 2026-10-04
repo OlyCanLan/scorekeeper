@@ -1335,6 +1335,7 @@ func main() {
 				//Assign the playerDecklistData
 				playerDecklistData.(map[string]interface{})["url"] = url
 				playerDecklistData.(map[string]interface{})["name"] = name
+				playerDecklistData.(map[string]interface{})["approved"] = false
 
 				//Save season.json
 				err_season := saveSeason()
