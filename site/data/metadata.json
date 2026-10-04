@@ -3,7 +3,8 @@
         "active_players": 0,
         "battlers": 0,
         "current_round": 0,
-        "season": 7,
+        "season": 8,
+        "signup_message_id": "1555620473575051345",
         "signups": true,
         "start_date": "2026-10-12T00:00:00Z",
         "total_rounds": 0

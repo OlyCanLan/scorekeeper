@@ -1,6 +1,163 @@
 {
     "metadata": {
-        "last_updated": "2026-10-02T16:12:05Z"
+        "last_updated": "2026-10-04T00:35:08Z"
     },
-    "players": {}
+    "players": {
+        "1090533210116608010": {
+            "discord_nickname": "iamoceans",
+            "historical_record": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "wins": 0
+            },
+            "last_decklist": {
+                "name": "",
+                "url": ""
+            },
+            "seasons_played": []
+        },
+        "125788378607255552": {
+            "discord_nickname": "Shannon",
+            "historical_record": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "wins": 0
+            },
+            "last_decklist": {
+                "name": "",
+                "url": ""
+            },
+            "seasons_played": []
+        },
+        "162114243557195776": {
+            "discord_nickname": "Derek",
+            "historical_record": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "wins": 0
+            },
+            "last_decklist": {
+                "name": "",
+                "url": ""
+            },
+            "seasons_played": [
+                7
+            ]
+        },
+        "181628580055351296": {
+            "discord_nickname": "Shaye",
+            "historical_record": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "wins": 0
+            },
+            "last_decklist": {
+                "name": "",
+                "url": ""
+            },
+            "seasons_played": []
+        },
+        "203788335297069056": {
+            "discord_nickname": "MuhLamp",
+            "historical_record": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "wins": 0
+            },
+            "last_decklist": {
+                "name": "",
+                "url": ""
+            },
+            "seasons_played": []
+        },
+        "226175837869703169": {
+            "discord_nickname": "Moulton",
+            "historical_record": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "wins": 0
+            },
+            "last_decklist": {
+                "name": "",
+                "url": ""
+            },
+            "seasons_played": []
+        },
+        "322065285899223041": {
+            "discord_nickname": "Quinn",
+            "historical_record": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "wins": 0
+            },
+            "last_decklist": {
+                "name": "",
+                "url": ""
+            },
+            "seasons_played": []
+        },
+        "338200782119632897": {
+            "discord_nickname": "kraken (they/them)",
+            "historical_record": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "wins": 0
+            },
+            "last_decklist": {
+                "name": "",
+                "url": ""
+            },
+            "seasons_played": []
+        },
+        "345443276930678794": {
+            "discord_nickname": "Andrew // Rez",
+            "historical_record": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "wins": 0
+            },
+            "last_decklist": {
+                "name": "",
+                "url": ""
+            },
+            "seasons_played": []
+        },
+        "693248438875455488": {
+            "discord_nickname": "Ian",
+            "historical_record": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "wins": 0
+            },
+            "last_decklist": {
+                "name": "",
+                "url": ""
+            },
+            "seasons_played": []
+        },
+        "875582542445674546": {
+            "discord_nickname": "Jacob. S",
+            "historical_record": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "wins": 0
+            },
+            "last_decklist": {
+                "name": "",
+                "url": ""
+            },
+            "seasons_played": []
+        }
+    }
 }

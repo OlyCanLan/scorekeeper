@@ -1,4 +1,225 @@
 {
     "rounds": {},
-    "season_players": {}
+    "season_players": {
+        "1090533210116608010": {
+            "active": true,
+            "decklist": {
+                "approved": false,
+                "name": "",
+                "url": "Not Submitted"
+            },
+            "dropped": false,
+            "opponents": [],
+            "pairings": [],
+            "received_bye": false,
+            "role": "battler",
+            "standings": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "points": 0,
+                "wins": 0
+            }
+        },
+        "125788378607255552": {
+            "active": true,
+            "decklist": {
+                "approved": false,
+                "name": "",
+                "url": "Not Submitted"
+            },
+            "dropped": false,
+            "opponents": [],
+            "pairings": [],
+            "received_bye": false,
+            "role": "battler",
+            "standings": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "points": 0,
+                "wins": 0
+            }
+        },
+        "162114243557195776": {
+            "active": true,
+            "decklist": {
+                "approved": true,
+                "name": "BUG Timmy Tinker",
+                "url": "https://moxfield.com/decks/46ugAb2yTX6VYrO1DFUniA"
+            },
+            "dropped": false,
+            "opponents": [],
+            "pairings": [],
+            "received_bye": false,
+            "role": "battler",
+            "standings": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "points": 0,
+                "wins": 0
+            }
+        },
+        "181628580055351296": {
+            "active": true,
+            "decklist": {
+                "approved": false,
+                "name": "",
+                "url": "Not Submitted"
+            },
+            "dropped": false,
+            "opponents": [],
+            "pairings": [],
+            "received_bye": false,
+            "role": "battler",
+            "standings": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "points": 0,
+                "wins": 0
+            }
+        },
+        "203788335297069056": {
+            "active": true,
+            "decklist": {
+                "approved": false,
+                "name": "",
+                "url": "Not Submitted"
+            },
+            "dropped": false,
+            "opponents": [],
+            "pairings": [],
+            "received_bye": false,
+            "role": "jammer",
+            "standings": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "points": 0,
+                "wins": 0
+            }
+        },
+        "226175837869703169": {
+            "active": true,
+            "decklist": {
+                "approved": false,
+                "name": "",
+                "url": "Not Submitted"
+            },
+            "dropped": false,
+            "opponents": [],
+            "pairings": [],
+            "received_bye": false,
+            "role": "battler",
+            "standings": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "points": 0,
+                "wins": 0
+            }
+        },
+        "322065285899223041": {
+            "active": true,
+            "decklist": {
+                "approved": true,
+                "name": "DECKLIST",
+                "url": "https://moxfield.com/decks/WrigARBQXHuw9_YP2qzj5A"
+            },
+            "dropped": false,
+            "opponents": [],
+            "pairings": [],
+            "received_bye": false,
+            "role": "battler",
+            "standings": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "points": 0,
+                "wins": 0
+            }
+        },
+        "338200782119632897": {
+            "active": true,
+            "decklist": {
+                "approved": false,
+                "name": "",
+                "url": "Not Submitted"
+            },
+            "dropped": false,
+            "opponents": [],
+            "pairings": [],
+            "received_bye": false,
+            "role": "battler",
+            "standings": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "points": 0,
+                "wins": 0
+            }
+        },
+        "345443276930678794": {
+            "active": true,
+            "decklist": {
+                "approved": true,
+                "name": "DECKLIST",
+                "url": "https://moxfield.com/decks/JM8YpDP4GkSg1qYVGO1zWg"
+            },
+            "dropped": false,
+            "opponents": [],
+            "pairings": [],
+            "received_bye": false,
+            "role": "battler",
+            "standings": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "points": 0,
+                "wins": 0
+            }
+        },
+        "693248438875455488": {
+            "active": true,
+            "decklist": {
+                "approved": false,
+                "name": "",
+                "url": "Not Submitted"
+            },
+            "dropped": false,
+            "opponents": [],
+            "pairings": [],
+            "received_bye": false,
+            "role": "battler",
+            "standings": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "points": 0,
+                "wins": 0
+            }
+        },
+        "875582542445674546": {
+            "active": true,
+            "decklist": {
+                "approved": false,
+                "name": "",
+                "url": "Not Submitted"
+            },
+            "dropped": false,
+            "opponents": [],
+            "pairings": [],
+            "received_bye": false,
+            "role": "battler",
+            "standings": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "points": 0,
+                "wins": 0
+            }
+        }
+    }
 }
