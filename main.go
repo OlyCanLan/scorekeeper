@@ -639,18 +639,16 @@ func buildSignupEmbed(seasonNum float64, startDate time.Time) *discordgo.Message
 	}
 
 	return &discordgo.MessageEmbed{
-		Title:       "🍁⚔️ Olympia Canadian Highlander League Signups Are Now OPEN! 👊🍁",
-		Description: fmt.Sprintf("Season %v", seasonNum),
+		Title:       fmt.Sprintf("🍁⚔️ Season %v League Signups Are Now OPEN! 👊🍁", seasonNum),
+		Description: fmt.Sprintf("BEGINS %v", startDate.Format("January 2, 2006")),
 		Color:       0xD80621, // Canadian Flag Red 🍁
 		Fields: []*discordgo.MessageEmbedField{
 			{
 				Value: fmt.Sprintf(
-					"Welcome to Olympia Canlander Season %v.\n"+
-						"The league will begin on %v. \n\n"+
+					"Welcome to Olympia Canlander Season %v.\n\n"+
 						"📝 | Signup using `/signup battler` or `/signup jammer`. Battlers must submit their decklist before the season begins.\n\n"+
 						"📖 | [RULES](https://bot.olycanlan.org/) | You can find the full rules for this season here on the website.\n",
 					seasonNum,
-					startDate.Format("January 2, 2006"),
 				),
 				Inline: false,
 			},
