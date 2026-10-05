@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "last_updated": "2026-10-04T20:54:14Z"
+        "last_updated": "2026-10-05T06:29:33Z"
     },
     "players": {
         "1090533210116608010": {
@@ -147,6 +147,20 @@
         },
         "875582542445674546": {
             "discord_nickname": "Jacob. S",
+            "historical_record": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "wins": 0
+            },
+            "last_decklist": {
+                "name": "",
+                "url": ""
+            },
+            "seasons_played": []
+        },
+        "95591239100928000": {
+            "discord_nickname": "Jordan",
             "historical_record": {
                 "game_losses": 0,
                 "game_wins": 0,

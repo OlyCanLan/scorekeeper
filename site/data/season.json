@@ -220,6 +220,26 @@
                 "points": 0,
                 "wins": 0
             }
+        },
+        "95591239100928000": {
+            "active": true,
+            "decklist": {
+                "approved": false,
+                "name": "DECKLIST",
+                "url": "https://moxfield.com/decks/pgqhAWIWR323QfumL7YMkg"
+            },
+            "dropped": false,
+            "opponents": [],
+            "pairings": [],
+            "received_bye": false,
+            "role": "battler",
+            "standings": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "points": 0,
+                "wins": 0
+            }
         }
     }
 }
