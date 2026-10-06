@@ -18,6 +18,7 @@ import (
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/joho/godotenv"
+	"github.com/olycanlan/scorekeeper/internal/pairing"
 )
 
 // Bot Data Structures & Functions. To store in memory rather than read/write json continually.
