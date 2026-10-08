@@ -264,9 +264,9 @@
         "693248438875455488": {
             "active": true,
             "decklist": {
-                "approved": false,
-                "name": "",
-                "url": "Not Submitted"
+                "approved": true,
+                "name": "DECKLIST",
+                "url": "https://moxfield.com/decks/muEp9gsLzUmLTY8oLh9-3w"
             },
             "dropped": false,
             "opponents": [],
