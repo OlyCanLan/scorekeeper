@@ -161,6 +161,26 @@
                 "wins": 0
             }
         },
+        "325886028294389760": {
+            "active": true,
+            "decklist": {
+                "approved": true,
+                "name": "DECKLIST",
+                "url": "https://moxfield.com/decks/mELb-G_r9kG-7Vn90zKkeA"
+            },
+            "dropped": false,
+            "opponents": [],
+            "pairings": [],
+            "received_bye": false,
+            "role": "battler",
+            "standings": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "points": 0,
+                "wins": 0
+            }
+        },
         "338200782119632897": {
             "active": true,
             "decklist": {
