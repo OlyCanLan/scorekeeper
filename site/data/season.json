@@ -199,9 +199,9 @@
         "181628580055351296": {
             "active": true,
             "decklist": {
-                "approved": false,
-                "name": "",
-                "url": "Not Submitted"
+                "approved": true,
+                "name": "Doomsday Breach",
+                "url": "https://moxfield.com/decks/E3oEXCEZnkuw6NA6rAvoFQ"
             },
             "dropped": false,
             "opponents": [],
