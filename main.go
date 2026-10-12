@@ -2182,6 +2182,27 @@ func main() {
 					})
 				}
 
+				//Add a list of available jammers to the bottom of the embed
+				var jammers []string
+				for id, player := range playerData {
+					p := player.(map[string]interface{})
+					if p["role"].(string) != "jammer" {
+						continue
+					}
+					if active, _ := p["active"].(bool); !active {
+						continue
+					}
+					jammers = append(jammers, fmt.Sprintf("<@%s>", id))
+				}
+				if len(jammers) > 0 {
+					sort.Strings(jammers) //map iteration is random, so sort for a stable order
+					fields = append(fields, &discordgo.MessageEmbedField{
+						Name:   "👊 Available Jammers",
+						Value:  strings.Join(jammers, ", "),
+						Inline: false,
+					})
+				}
+
 				//Clear pending round
 				roundsData["pending"] = nil
 
