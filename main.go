@@ -309,8 +309,8 @@ var commands = []*discordgo.ApplicationCommand{
 					{
 						Type:        discordgo.ApplicationCommandOptionString,
 						Name:        "name",
-						Description: "Deck Name (Optional)",
-						Required:    false,
+						Description: "Deck Name or Archetype",
+						Required:    true,
 					},
 				},
 			},
@@ -420,6 +420,31 @@ var commands = []*discordgo.ApplicationCommand{
 								Value: "jammer",
 							},
 						},
+					},
+				},
+			},
+			{
+				Type:        discordgo.ApplicationCommandOptionSubCommand,
+				Name:        "player-decklist",
+				Description: "Admin decklist submission for a specified player.",
+				Options: []*discordgo.ApplicationCommandOption{
+					{
+						Type:        discordgo.ApplicationCommandOptionUser,
+						Name:        "player",
+						Description: "Player",
+						Required:    true,
+					},
+					{
+						Type:        discordgo.ApplicationCommandOptionString,
+						Name:        "decklist",
+						Description: "Decklist Link",
+						Required:    true,
+					},
+					{
+						Type:        discordgo.ApplicationCommandOptionString,
+						Name:        "name",
+						Description: "Decklist Name",
+						Required:    true,
 					},
 				},
 			},
@@ -2181,7 +2206,7 @@ func main() {
 					os.Getenv("MATCHES_CHNL_ID"),
 
 					&discordgo.MessageSend{
-						Content: fmt.Sprintf("<@%v> <@%v>", os.Getenv("BATTLER_ID"), os.Getenv("JAMMER_ID")),
+						Content: fmt.Sprintf("<@&%v> <@&%v>", os.Getenv("BATTLER_ID"), os.Getenv("JAMMER_ID")),
 
 						Embeds: []*discordgo.MessageEmbed{
 							embed,
@@ -2189,7 +2214,7 @@ func main() {
 
 						AllowedMentions: &discordgo.MessageAllowedMentions{
 							Parse: []discordgo.AllowedMentionType{
-								discordgo.AllowedMentionTypeEveryone,
+								discordgo.AllowedMentionTypeRoles,
 							},
 						},
 					},
@@ -2907,6 +2932,63 @@ func main() {
 					//Respond with an ephemeral message
 					replyEphemeral(s, i, fmt.Sprintf("<@%v> has been signed up as a Jammer 👊 for this season!", player.ID))
 				}
+
+			case "player-decklist": //Admin verion of decklist submission.
+
+				//Gather info submitted in command
+				subOptions := i.ApplicationCommandData().Options[0].Options
+
+				//Player
+				player := subOptions[0].UserValue(s)
+
+				//decklist & name
+				url := subOptions[1].StringValue()
+				name := subOptions[2].StringValue()
+
+				//Lock bot data
+				botData.Mutex.Lock()
+
+				//Logic check if player already in season data
+				existingSeasonPlayer, exists := botData.Season["season_players"].(map[string]interface{})[player.ID]
+
+				//If exists = false, then there is something here. They dont have player data in season.json but are holding the battler role.
+				if !exists {
+					replyEphemeral(s, i, fmt.Sprintf("No seasonal player data found for <@%v>. Contact the bot administrator.", player.ID))
+					botData.Mutex.Unlock()
+					return
+				}
+
+				//Get player decklist data
+				playerDecklistData := existingSeasonPlayer.(map[string]interface{})["decklist"]
+
+				//Normalize the URL formatting
+				if !strings.HasPrefix(url, "http://") && !strings.HasPrefix(url, "https://") {
+					url = "https://" + url
+				}
+				_, err := neturl.ParseRequestURI(url)
+				if err != nil {
+					replyEphemeral(s, i, fmt.Sprintf("The URL provided is invalid. Please resubmit `/admin player-decklist` with a valid URL.\n%v", url))
+					botData.Mutex.Unlock()
+					return
+				}
+
+				//Assign the playerDecklistData
+				playerDecklistData.(map[string]interface{})["url"] = url
+				playerDecklistData.(map[string]interface{})["name"] = name
+				playerDecklistData.(map[string]interface{})["approved"] = true
+
+				//Save season.json
+				err_season := saveSeason()
+				//Unlock botdata
+				botData.Mutex.Unlock()
+				//Print errors AFTER unlock
+				if err_season != nil {
+					replyEphemeral(s, i, "Failed to save the decklist. Check the bot logs.")
+					return
+				}
+
+				//Reply with ephemeral reply confirming submission
+				replyEphemeral(s, i, fmt.Sprintf("<@%v>'s decklist has been submitted.\n[%v](%v)", player.ID, name, url))
 
 			case "player-drop": //Admin version of drop for selected player
 
