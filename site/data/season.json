@@ -133,9 +133,9 @@
         "125788378607255552": {
             "active": true,
             "decklist": {
-                "approved": false,
-                "name": "",
-                "url": "Not Submitted"
+                "approved": true,
+                "name": "Czech Pile",
+                "url": "https://moxfield.com/decks/SY2gARjxD3WeTRG1b4JNTg"
             },
             "dropped": false,
             "opponents": [],
