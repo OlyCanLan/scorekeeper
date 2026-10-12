@@ -2167,10 +2167,13 @@ func main() {
 					return
 				}
 
+				twoWeeks := time.Now().In(time.FixedZone("PST", -8*60*60)).AddDate(0, 0, 14).Format("01/02/06")
+
 				//build embed
 				embed := &discordgo.MessageEmbed{
-					Title:  fmt.Sprintf("🍁 Round %d Pairings 🍁", currentRound),
-					Fields: fields,
+					Title:       fmt.Sprintf("🍁 Round %d Pairings | Closing: %v 🍁", currentRound, twoWeeks),
+					Description: "Report your matches using `/result` in any chat channel. Good luck!",
+					Fields:      fields,
 				}
 
 				//Make announcement
@@ -2178,7 +2181,7 @@ func main() {
 					os.Getenv("MATCHES_CHNL_ID"),
 
 					&discordgo.MessageSend{
-						Content: "@everyone",
+						Content: fmt.Sprintf("<@%v> <@%v>", os.Getenv("BATTLER_ID"), os.Getenv("JAMMER_ID")),
 
 						Embeds: []*discordgo.MessageEmbed{
 							embed,
