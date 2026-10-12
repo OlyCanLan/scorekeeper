@@ -243,9 +243,9 @@
         "213013057637580800": {
             "active": true,
             "decklist": {
-                "approved": false,
-                "name": "",
-                "url": "Not Submitted"
+                "approved": true,
+                "name": "Blue Moon",
+                "url": "https://moxfield.com/decks/MoufAdbD_3uMhKakfrr-_Q"
             },
             "dropped": false,
             "opponents": [],
