@@ -284,9 +284,9 @@
         "373445222832537600": {
             "active": true,
             "decklist": {
-                "approved": false,
-                "name": "",
-                "url": "Not Submitted"
+                "approved": true,
+                "name": "Jund Lands",
+                "url": "https://moxfield.com/decks/IB2hAUs1wniowebML5us5w"
             },
             "dropped": false,
             "opponents": [],
