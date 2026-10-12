@@ -1,6 +1,6 @@
 {
     "rounds": {
-        "1": {
+        "2": {
             "pairings": [
                 {
                     "bye": false,
@@ -46,7 +46,7 @@
                     "bye": false,
                     "match_id": "",
                     "player1": "291622788949737473",
-                    "player2": "237117537404452874",
+                    "player2": "226175837869703169",
                     "reported": false,
                     "result": "",
                     "table": 5,
@@ -65,21 +65,11 @@
                 {
                     "bye": false,
                     "match_id": "",
-                    "player1": "203788335297069056",
-                    "player2": "226175837869703169",
-                    "reported": false,
-                    "result": "",
-                    "table": 7,
-                    "winner": ""
-                },
-                {
-                    "bye": false,
-                    "match_id": "",
                     "player1": "213013057637580800",
                     "player2": "125788378607255552",
                     "reported": false,
                     "result": "",
-                    "table": 8,
+                    "table": 7,
                     "winner": ""
                 },
                 {
@@ -89,7 +79,7 @@
                     "player2": "95591239100928000",
                     "reported": false,
                     "result": "",
-                    "table": 9,
+                    "table": 8,
                     "winner": ""
                 },
                 {
@@ -99,7 +89,7 @@
                     "player2": "",
                     "reported": false,
                     "result": "",
-                    "table": 10,
+                    "table": 9,
                     "winner": ""
                 }
             ],
@@ -118,6 +108,7 @@
             "dropped": false,
             "opponents": [],
             "pairings": [
+                "875582542445674546",
                 "875582542445674546"
             ],
             "received_bye": false,
@@ -140,6 +131,7 @@
             "dropped": false,
             "opponents": [],
             "pairings": [
+                "213013057637580800",
                 "213013057637580800"
             ],
             "received_bye": false,
@@ -162,6 +154,7 @@
             "dropped": false,
             "opponents": [],
             "pairings": [
+                "373445222832537600",
                 "373445222832537600"
             ],
             "received_bye": false,
@@ -184,6 +177,7 @@
             "dropped": false,
             "opponents": [],
             "pairings": [
+                "693248438875455488",
                 "693248438875455488"
             ],
             "received_bye": false,
@@ -206,6 +200,7 @@
             "dropped": false,
             "opponents": [],
             "pairings": [
+                "325886028294389760",
                 "325886028294389760"
             ],
             "received_bye": false,
@@ -250,6 +245,7 @@
             "dropped": false,
             "opponents": [],
             "pairings": [
+                "125788378607255552",
                 "125788378607255552"
             ],
             "received_bye": false,
@@ -272,7 +268,8 @@
             "dropped": false,
             "opponents": [],
             "pairings": [
-                "203788335297069056"
+                "203788335297069056",
+                "291622788949737473"
             ],
             "received_bye": false,
             "role": "battler",
@@ -316,10 +313,31 @@
             "dropped": false,
             "opponents": [],
             "pairings": [
-                "237117537404452874"
+                "237117537404452874",
+                "226175837869703169"
             ],
             "received_bye": false,
             "role": "battler",
+            "standings": {
+                "game_losses": 0,
+                "game_wins": 0,
+                "losses": 0,
+                "points": 0,
+                "wins": 0
+            }
+        },
+        "315488284723904512": {
+            "active": true,
+            "decklist": {
+                "approved": false,
+                "name": "",
+                "url": "Not Submitted"
+            },
+            "dropped": false,
+            "opponents": [],
+            "pairings": [],
+            "received_bye": false,
+            "role": "jammer",
             "standings": {
                 "game_losses": 0,
                 "game_wins": 0,
@@ -338,6 +356,7 @@
             "dropped": false,
             "opponents": [],
             "pairings": [
+                "345443276930678794",
                 "345443276930678794"
             ],
             "received_bye": false,
@@ -360,6 +379,7 @@
             "dropped": false,
             "opponents": [],
             "pairings": [
+                "181628580055351296",
                 "181628580055351296"
             ],
             "received_bye": false,
@@ -402,6 +422,7 @@
             "dropped": false,
             "opponents": [],
             "pairings": [
+                "322065285899223041",
                 "322065285899223041"
             ],
             "received_bye": false,
@@ -424,6 +445,7 @@
             "dropped": false,
             "opponents": [],
             "pairings": [
+                "162114243557195776",
                 "162114243557195776"
             ],
             "received_bye": false,
@@ -446,6 +468,7 @@
             "dropped": false,
             "opponents": [],
             "pairings": [
+                "95591239100928000",
                 "95591239100928000"
             ],
             "received_bye": false,
@@ -468,6 +491,7 @@
             "dropped": false,
             "opponents": [],
             "pairings": [
+                "175332744732082178",
                 "175332744732082178"
             ],
             "received_bye": false,
@@ -490,6 +514,7 @@
             "dropped": false,
             "opponents": [],
             "pairings": [
+                "1090533210116608010",
                 "1090533210116608010"
             ],
             "received_bye": false,
@@ -512,6 +537,7 @@
             "dropped": false,
             "opponents": [],
             "pairings": [
+                "668881577656320001",
                 "668881577656320001"
             ],
             "received_bye": false,
