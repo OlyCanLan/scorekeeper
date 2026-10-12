@@ -1895,8 +1895,12 @@ func main() {
 					playerData := player.(map[string]interface{})
 
 					active := playerData["active"].(bool)
+					if !active { //if active == FALSE skip player
+						continue
+					}
 
-					if !active { // if active == FALSE skip player
+					role := playerData["role"].(string)
+					if role == "jammer" { //if JAMMER skip player
 						continue
 					}
 
