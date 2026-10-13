@@ -258,8 +258,8 @@ var commands = []*discordgo.ApplicationCommand{
 				Required:    true,
 				Choices: []*discordgo.ApplicationCommandOptionChoice{
 					{
-						Name:  "3-0",
-						Value: "3-0",
+						Name:  "2-0",
+						Value: "2-0",
 					},
 					{
 						Name:  "2-1",
@@ -543,8 +543,8 @@ var commands = []*discordgo.ApplicationCommand{
 						Required:    false,
 						Choices: []*discordgo.ApplicationCommandOptionChoice{
 							{
-								Name:  "3-0",
-								Value: "3-0",
+								Name:  "2-0",
+								Value: "2-0",
 							},
 							{
 								Name:  "2-1",
