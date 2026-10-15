@@ -443,7 +443,7 @@ var commands = []*discordgo.ApplicationCommand{
 					{
 						Type:        discordgo.ApplicationCommandOptionString,
 						Name:        "name",
-						Description: "Decklist Name",
+						Description: "Decklist Name or Archetype",
 						Required:    true,
 					},
 				},
