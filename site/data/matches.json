@@ -45,11 +45,11 @@
                 "winner": "226175837869703169"
             },
             "S08-006": {
-                "bounty": false,
+                "bounty": true,
                 "loser": "875582542445674546",
                 "msg_id": "1561213504642490410",
                 "result": "2-0",
-                "status": "active",
+                "status": "edited",
                 "winner": "1090533210116608010"
             },
             "S08-007": {
@@ -74,6 +74,6 @@
         }
     },
     "metadata": {
-        "last_updated": "2026-10-18T18:32:52Z"
+        "last_updated": "2026-10-18T19:26:33Z"
     }
 }
