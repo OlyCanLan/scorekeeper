@@ -3586,17 +3586,11 @@ func main() {
 				Type: discordgo.InteractionResponseDeferredMessageUpdate,
 			})
 		case "post_reminder":
-			msg, err := s.ChannelMessage(i.ChannelID, i.Message.ID)
-
-			// Sanity checks
-			if err != nil {
-				return
-			}
-			if len(msg.Embeds) == 0 {
+			if i.Message == nil || len(i.Message.Embeds) == 0 {
 				return
 			}
 
-			embed := msg.Embeds[0]
+			embed := i.Message.Embeds[0]
 			embed.Title = "Unreported Bounty Reminder"
 
 			s.ChannelMessageSendComplex(
