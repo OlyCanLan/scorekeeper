@@ -118,7 +118,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "125788378607255552": {
@@ -141,7 +145,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "162114243557195776": {
@@ -164,7 +172,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "175332744732082178": {
@@ -187,7 +199,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "181628580055351296": {
@@ -210,7 +226,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "203788335297069056": {
@@ -232,7 +252,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "213013057637580800": {
@@ -255,7 +279,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "226175837869703169": {
@@ -278,7 +306,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "237117537404452874": {
@@ -300,7 +332,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "291622788949737473": {
@@ -323,7 +359,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "315488284723904512": {
@@ -343,7 +383,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "322065285899223041": {
@@ -366,7 +410,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "325886028294389760": {
@@ -389,7 +437,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "338200782119632897": {
@@ -409,7 +461,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "345443276930678794": {
@@ -432,7 +488,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "373445222832537600": {
@@ -455,7 +515,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "668881577656320001": {
@@ -478,7 +542,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "693248438875455488": {
@@ -501,7 +569,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "875582542445674546": {
@@ -524,7 +596,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         },
         "95591239100928000": {
@@ -547,7 +623,11 @@
                 "game_wins": 0,
                 "losses": 0,
                 "points": 0,
-                "wins": 0
+                "wins": 0,
+                "wins_nonbounty": 0,
+                "losses_nonbounty": 0,
+                "game_losses_nonbounty": 0,
+                "game_wins_nonbounty": 0
             }
         }
     }

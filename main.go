@@ -1071,11 +1071,15 @@ func main() {
 						"received_bye": false,
 						"role":         "battler",
 						"standings": map[string]interface{}{
-							"points":      0,
-							"wins":        0,
-							"losses":      0,
-							"game_wins":   0,
-							"game_losses": 0,
+							"points":                0,
+							"wins":                  0,
+							"losses":                0,
+							"game_wins":             0,
+							"game_losses":           0,
+							"wins_nonbounty":        0,
+							"losses_nonbounty":      0,
+							"game_wins_nonbounty":   0,
+							"game_losses_nonbounty": 0,
 						},
 					}
 
@@ -1108,10 +1112,14 @@ func main() {
 					playersHistory[i.Member.User.ID] = map[string]interface{}{
 						"discord_nickname": nickname,
 						"historical_record": map[string]interface{}{
-							"game_losses": 0,
-							"game_wins":   0,
-							"losses":      0,
-							"wins":        0,
+							"game_losses":           0,
+							"game_wins":             0,
+							"losses":                0,
+							"wins":                  0,
+							"wins_nonbounty":        0,
+							"losses_nonbounty":      0,
+							"game_wins_nonbounty":   0,
+							"game_losses_nonbounty": 0,
 						},
 						"last_decklist": map[string]interface{}{
 							"name": "",
@@ -1193,11 +1201,15 @@ func main() {
 						"received_bye": false,
 						"role":         "jammer",
 						"standings": map[string]interface{}{
-							"points":      0,
-							"wins":        0,
-							"losses":      0,
-							"game_wins":   0,
-							"game_losses": 0,
+							"points":                0,
+							"wins":                  0,
+							"losses":                0,
+							"game_wins":             0,
+							"game_losses":           0,
+							"wins_nonbounty":        0,
+							"losses_nonbounty":      0,
+							"game_wins_nonbounty":   0,
+							"game_losses_nonbounty": 0,
 						},
 					}
 
@@ -1230,10 +1242,14 @@ func main() {
 					playersHistory[i.Member.User.ID] = map[string]interface{}{
 						"discord_nickname": nickname,
 						"historical_record": map[string]interface{}{
-							"game_losses": 0,
-							"game_wins":   0,
-							"losses":      0,
-							"wins":        0,
+							"game_losses":           0,
+							"game_wins":             0,
+							"losses":                0,
+							"wins":                  0,
+							"wins_nonbounty":        0,
+							"losses_nonbounty":      0,
+							"game_wins_nonbounty":   0,
+							"game_losses_nonbounty": 0,
 						},
 						"last_decklist": map[string]interface{}{
 							"name": "",
@@ -1686,19 +1702,23 @@ func main() {
 					playerHistRecord := playerDataHist["historical_record"].(map[string]interface{})
 					playerLastDeck := playerDataHist["last_decklist"].(map[string]interface{})
 
-					//Update historical_record
+					//Update historical_record (merging bounty + nonbounty data)
 					playerHistRecord["wins"] =
 						playerHistRecord["wins"].(float64) +
-							playerSeasonStandings["wins"].(float64)
+							playerSeasonStandings["wins"].(float64) +
+							playerSeasonStandings["wins_nonbounty"].(float64)
 					playerHistRecord["losses"] =
 						playerHistRecord["losses"].(float64) +
-							playerSeasonStandings["losses"].(float64)
+							playerSeasonStandings["losses"].(float64) +
+							playerSeasonStandings["losses_nonbounty"].(float64)
 					playerHistRecord["game_wins"] =
 						playerHistRecord["game_wins"].(float64) +
-							playerSeasonStandings["game_wins"].(float64)
+							playerSeasonStandings["game_wins"].(float64) +
+							playerSeasonStandings["game_wins_nonbounty"].(float64)
 					playerHistRecord["game_losses"] =
 						playerHistRecord["game_losses"].(float64) +
-							playerSeasonStandings["game_losses"].(float64)
+							playerSeasonStandings["game_losses"].(float64) +
+							playerSeasonStandings["game_losses_nonbounty"].(float64)
 
 					//Update last_decklist only if they submitted one (as a battler)
 					if playerDataSeason["role"].(string) == "battler" {
@@ -2427,17 +2447,28 @@ func main() {
 					wStandings := wPlayerData["standings"].(map[string]interface{})
 					lStandings := lPlayerData["standings"].(map[string]interface{})
 
-					//Apply changes to winner's standings data
+					//Apply points to winner/loser standings data
 					wStandings["points"] = wStandings["points"].(float64) + float64(wPoints)
-					wStandings["wins"] = wStandings["wins"].(float64) + float64(1)
-					wStandings["game_wins"] = wStandings["game_wins"].(float64) + float64(resultW)
-					wStandings["game_losses"] = wStandings["game_losses"].(float64) + float64(resultL)
-
-					//Apply changes to loser's standings data
 					lStandings["points"] = lStandings["points"].(float64) + float64(lPoints)
-					lStandings["losses"] = lStandings["losses"].(float64) + float64(1)
-					lStandings["game_wins"] = lStandings["game_wins"].(float64) + float64(resultL)
-					lStandings["game_losses"] = lStandings["game_losses"].(float64) + float64(resultW)
+
+					//Apply win/losses if bounty (for round generation)
+					if matchData["bounty"].(bool) {
+						wStandings["wins"] = wStandings["wins"].(float64) + float64(1)
+						wStandings["game_wins"] = wStandings["game_wins"].(float64) + float64(resultW)
+						wStandings["game_losses"] = wStandings["game_losses"].(float64) + float64(resultL)
+
+						lStandings["losses"] = lStandings["losses"].(float64) + float64(1)
+						lStandings["game_wins"] = lStandings["game_wins"].(float64) + float64(resultL)
+						lStandings["game_losses"] = lStandings["game_losses"].(float64) + float64(resultW)
+					} else {
+						wStandings["wins_nonbounty"] = wStandings["wins_nonbounty"].(float64) + float64(1)
+						wStandings["game_wins_nonbounty"] = wStandings["game_wins_nonbounty"].(float64) + float64(resultW)
+						wStandings["game_losses_nonbounty"] = wStandings["game_losses_nonbounty"].(float64) + float64(resultL)
+
+						lStandings["losses_nonbounty"] = lStandings["losses_nonbounty"].(float64) + float64(1)
+						lStandings["game_wins_nonbounty"] = lStandings["game_wins_nonbounty"].(float64) + float64(resultL)
+						lStandings["game_losses_nonbounty"] = lStandings["game_losses_nonbounty"].(float64) + float64(resultW)
+					}
 
 					//Set match as logged
 					matchData["status"] = "logged"
@@ -2467,31 +2498,47 @@ func main() {
 				//Share new standings
 				//Construct Standings Table Embed
 				type StandingsEntry struct {
-					ID     string
-					Wins   int
-					Losses int
-					Points int
+					ID               string
+					Role             string
+					Wins             int
+					Losses           int
+					Points           int
+					Wins_nonbounty   int
+					Losses_nonbounty int
 				}
 
 				//Standings -> list of entries
 				var standings []StandingsEntry
+				var jammers []StandingsEntry
 
 				for playerID, player := range playersData {
 					p := player.(map[string]interface{})
 
 					role := p["role"].(string)
 
-					if role != "battler" { // skip non-battlers
+					pStandings := p["standings"].(map[string]interface{})
+
+					if role != "battler" { // track jammers separately
+						jammers = append(jammers, StandingsEntry{
+							ID:               playerID,
+							Role:             role,
+							Wins:             int(pStandings["wins"].(float64)),
+							Losses:           int(pStandings["losses"].(float64)),
+							Points:           int(pStandings["points"].(float64)),
+							Wins_nonbounty:   int(pStandings["wins_nonbounty"].(float64)),
+							Losses_nonbounty: int(pStandings["losses_nonbounty"].(float64)),
+						})
 						continue
 					}
 
-					pStandings := p["standings"].(map[string]interface{})
-
 					standings = append(standings, StandingsEntry{
-						ID:     playerID,
-						Wins:   int(pStandings["wins"].(float64)),
-						Losses: int(pStandings["losses"].(float64)),
-						Points: int(pStandings["points"].(float64)),
+						ID:               playerID,
+						Role:             role,
+						Wins:             int(pStandings["wins"].(float64)),
+						Losses:           int(pStandings["losses"].(float64)),
+						Points:           int(pStandings["points"].(float64)),
+						Wins_nonbounty:   int(pStandings["wins_nonbounty"].(float64)),
+						Losses_nonbounty: int(pStandings["losses_nonbounty"].(float64)),
 					})
 				}
 
@@ -2511,6 +2558,16 @@ func main() {
 					}
 					//Then by points
 					return standings[i].Points > standings[j].Points
+				})
+
+				//Sort Jammers
+				sort.Slice(jammers, func(i, j int) bool {
+					//First sort by points
+					if standings[i].Wins != standings[j].Wins {
+						return standings[i].Points > standings[j].Points
+					}
+					//Then by wins
+					return standings[i].Wins > standings[j].Wins
 				})
 
 				// Group entries by record
@@ -2534,12 +2591,27 @@ func main() {
 					// Build the value string for this record group
 					var sb strings.Builder
 					for _, p := range recordGroups[record] {
-						sb.WriteString(fmt.Sprintf("<@%s> | %d pts\n", p.ID, p.Points))
+						totalWins := p.Wins + p.Wins_nonbounty
+						totalLosses := p.Losses + p.Losses_nonbounty
+						sb.WriteString(fmt.Sprintf("<@%s> | %d pts | (%v-%v)\n", p.ID, p.Points, totalWins, totalLosses))
 					}
 
 					standingsFields = append(standingsFields, &discordgo.MessageEmbedField{
 						Name:   record,
 						Value:  sb.String(),
+						Inline: false,
+					})
+				}
+
+				//Append jammers to bottom
+				if len(jammers) > 0 {
+					var jb strings.Builder
+					for _, p := range jammers {
+						jb.WriteString(fmt.Sprintf("<@%s> | %d pts | (%v-%v)\n", p.ID, p.Points, p.Wins_nonbounty, p.Losses_nonbounty))
+					}
+					standingsFields = append(standingsFields, &discordgo.MessageEmbedField{
+						Name:   "👊 Jammers",
+						Value:  jb.String(),
 						Inline: false,
 					})
 				}
