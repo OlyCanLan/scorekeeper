@@ -2562,12 +2562,8 @@ func main() {
 
 				//Sort Jammers
 				sort.Slice(jammers, func(i, j int) bool {
-					//First sort by points
-					if standings[i].Wins != standings[j].Wins {
-						return standings[i].Points > standings[j].Points
-					}
-					//Then by wins
-					return standings[i].Wins > standings[j].Wins
+					//Sort by points
+					return jammers[i].Wins > jammers[j].Wins
 				})
 
 				// Group entries by record
