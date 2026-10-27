@@ -163,13 +163,29 @@
                 "result": "0-0",
                 "status": "logged",
                 "winner": "668881577656320001"
+            },
+            "S08-021": {
+                "bounty": false,
+                "loser": "226175837869703169",
+                "msg_id": "1564453304765907107",
+                "result": "2-1",
+                "status": "active",
+                "winner": "203788335297069056"
+            },
+            "S08-022": {
+                "bounty": false,
+                "loser": "162114243557195776",
+                "msg_id": "1564454799880102040",
+                "result": "2-1",
+                "status": "active",
+                "winner": "325886028294389760"
             }
         },
         "metadata": {
-            "next_match_id": 21
+            "next_match_id": 23
         }
     },
     "metadata": {
-        "last_updated": "2026-10-26T21:10:47Z"
+        "last_updated": "2026-10-27T01:44:50Z"
     }
 }
