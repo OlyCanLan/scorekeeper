@@ -765,13 +765,13 @@
             }
         },
         "95591239100928000": {
-            "active": true,
+            "active": false,
             "decklist": {
                 "approved": true,
                 "name": "DECKLIST",
                 "url": "https://moxfield.com/decks/pgqhAWIWR323QfumL7YMkg"
             },
-            "dropped": false,
+            "dropped": true,
             "opponents": [
                 "668881577656320001"
             ],
