@@ -393,15 +393,15 @@
                 "loser": "226175837869703169",
                 "msg_id": "1569547309035819042",
                 "result": "2-1",
-                "status": "active",
+                "status": "voided",
                 "winner": "325886028294389760"
             },
             "S08-050": {
-                "bounty": false,
+                "bounty": true,
                 "loser": "162114243557195776",
                 "msg_id": "1569547729229586576",
                 "result": "2-1",
-                "status": "active",
+                "status": "edited",
                 "winner": "325886028294389760"
             },
             "S08-051": {
@@ -442,6 +442,6 @@
         }
     },
     "metadata": {
-        "last_updated": "2026-11-10T03:42:13Z"
+        "last_updated": "2026-11-10T03:46:43Z"
     }
 }
