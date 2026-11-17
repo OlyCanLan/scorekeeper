@@ -483,13 +483,21 @@
                 "result": "2-0",
                 "status": "active",
                 "winner": "668881577656320001"
+            },
+            "S08-061": {
+                "bounty": false,
+                "loser": "338200782119632897",
+                "msg_id": "1572074572004597873",
+                "result": "2-1",
+                "status": "active",
+                "winner": "325886028294389760"
             }
         },
         "metadata": {
-            "next_match_id": 61
+            "next_match_id": 62
         }
     },
     "metadata": {
-        "last_updated": "2026-11-17T00:40:19Z"
+        "last_updated": "2026-11-17T02:23:06Z"
     }
 }
