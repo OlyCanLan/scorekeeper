@@ -595,13 +595,37 @@
                 "result": "2-1",
                 "status": "active",
                 "winner": "322065285899223041"
+            },
+            "S08-075": {
+                "bounty": false,
+                "loser": "181628580055351296",
+                "msg_id": "1573932490324709470",
+                "result": "2-1",
+                "status": "active",
+                "winner": "203788335297069056"
+            },
+            "S08-076": {
+                "bounty": false,
+                "loser": "1090533210116608010",
+                "msg_id": "1573932640757874729",
+                "result": "2-1",
+                "status": "active",
+                "winner": "203788335297069056"
+            },
+            "S08-077": {
+                "bounty": false,
+                "loser": "203788335297069056",
+                "msg_id": "1573932713944023142",
+                "result": "2-1",
+                "status": "active",
+                "winner": "322065285899223041"
             }
         },
         "metadata": {
-            "next_match_id": 75
+            "next_match_id": 78
         }
     },
     "metadata": {
-        "last_updated": "2026-11-22T04:37:31Z"
+        "last_updated": "2026-11-22T05:26:41Z"
     }
 }
