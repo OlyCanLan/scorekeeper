@@ -194,9 +194,94 @@
             "pairings": [
                 {
                     "bye": false,
-                    "match_id": "",
+                    "match_id": "S08-065",
                     "player1": "1090533210116608010",
                     "player2": "373445222832537600",
+                    "reported": true,
+                    "result": "2-1",
+                    "table": 1,
+                    "winner": "1090533210116608010"
+                },
+                {
+                    "bye": false,
+                    "match_id": "S08-058",
+                    "player1": "322065285899223041",
+                    "player2": "338200782119632897",
+                    "reported": true,
+                    "result": "2-1",
+                    "table": 2,
+                    "winner": "322065285899223041"
+                },
+                {
+                    "bye": false,
+                    "match_id": "S08-064",
+                    "player1": "181628580055351296",
+                    "player2": "693248438875455488",
+                    "reported": true,
+                    "result": "0-0",
+                    "table": 3,
+                    "winner": "181628580055351296"
+                },
+                {
+                    "bye": false,
+                    "match_id": "S08-052",
+                    "player1": "226175837869703169",
+                    "player2": "125788378607255552",
+                    "reported": true,
+                    "result": "2-0",
+                    "table": 4,
+                    "winner": "125788378607255552"
+                },
+                {
+                    "bye": false,
+                    "match_id": "S08-050",
+                    "player1": "162114243557195776",
+                    "player2": "325886028294389760",
+                    "reported": true,
+                    "result": "2-1",
+                    "table": 5,
+                    "winner": "325886028294389760"
+                },
+                {
+                    "bye": false,
+                    "match_id": "S08-060",
+                    "player1": "875582542445674546",
+                    "player2": "668881577656320001",
+                    "reported": true,
+                    "result": "2-0",
+                    "table": 6,
+                    "winner": "668881577656320001"
+                },
+                {
+                    "bye": false,
+                    "match_id": "S08-079",
+                    "player1": "291622788949737473",
+                    "player2": "213013057637580800",
+                    "reported": true,
+                    "result": "0-0",
+                    "table": 7,
+                    "winner": "291622788949737473"
+                },
+                {
+                    "bye": true,
+                    "match_id": "",
+                    "player1": "345443276930678794",
+                    "player2": "",
+                    "reported": false,
+                    "result": "",
+                    "table": 8,
+                    "winner": ""
+                }
+            ],
+            "status": "completed"
+        },
+        "4": {
+            "pairings": [
+                {
+                    "bye": false,
+                    "match_id": "",
+                    "player1": "322065285899223041",
+                    "player2": "1090533210116608010",
                     "reported": false,
                     "result": "",
                     "table": 1,
@@ -205,8 +290,8 @@
                 {
                     "bye": false,
                     "match_id": "",
-                    "player1": "322065285899223041",
-                    "player2": "338200782119632897",
+                    "player1": "181628580055351296",
+                    "player2": "373445222832537600",
                     "reported": false,
                     "result": "",
                     "table": 2,
@@ -215,8 +300,8 @@
                 {
                     "bye": false,
                     "match_id": "",
-                    "player1": "181628580055351296",
-                    "player2": "693248438875455488",
+                    "player1": "325886028294389760",
+                    "player2": "668881577656320001",
                     "reported": false,
                     "result": "",
                     "table": 3,
@@ -225,7 +310,7 @@
                 {
                     "bye": false,
                     "match_id": "",
-                    "player1": "226175837869703169",
+                    "player1": "291622788949737473",
                     "player2": "125788378607255552",
                     "reported": false,
                     "result": "",
@@ -235,8 +320,8 @@
                 {
                     "bye": false,
                     "match_id": "",
-                    "player1": "162114243557195776",
-                    "player2": "325886028294389760",
+                    "player1": "338200782119632897",
+                    "player2": "693248438875455488",
                     "reported": false,
                     "result": "",
                     "table": 5,
@@ -245,8 +330,8 @@
                 {
                     "bye": false,
                     "match_id": "",
-                    "player1": "875582542445674546",
-                    "player2": "668881577656320001",
+                    "player1": "345443276930678794",
+                    "player2": "875582542445674546",
                     "reported": false,
                     "result": "",
                     "table": 6,
@@ -255,8 +340,8 @@
                 {
                     "bye": false,
                     "match_id": "",
-                    "player1": "291622788949737473",
-                    "player2": "213013057637580800",
+                    "player1": "162114243557195776",
+                    "player2": "226175837869703169",
                     "reported": false,
                     "result": "",
                     "table": 7,
@@ -265,7 +350,7 @@
                 {
                     "bye": true,
                     "match_id": "",
-                    "player1": "345443276930678794",
+                    "player1": "213013057637580800",
                     "player2": "",
                     "reported": false,
                     "result": "",
@@ -291,25 +376,29 @@
                 "668881577656320001",
                 "226175837869703169",
                 "338200782119632897",
-                "345443276930678794"
+                "345443276930678794",
+                "203788335297069056",
+                "373445222832537600",
+                "325886028294389760"
             ],
             "pairings": [
                 "875582542445674546",
                 "875582542445674546",
                 "668881577656320001",
-                "373445222832537600"
+                "373445222832537600",
+                "322065285899223041"
             ],
             "received_bye": false,
             "role": "battler",
             "standings": {
-                "game_losses": 1,
-                "game_losses_nonbounty": 8,
-                "game_wins": 4,
-                "game_wins_nonbounty": 1,
+                "game_losses": 2,
+                "game_losses_nonbounty": 12,
+                "game_wins": 6,
+                "game_wins_nonbounty": 3,
                 "losses": 0,
-                "losses_nonbounty": 4,
-                "points": 21,
-                "wins": 2,
+                "losses_nonbounty": 6,
+                "points": 33,
+                "wins": 3,
                 "wins_nonbounty": 0
             }
         },
@@ -323,25 +412,27 @@
             "dropped": false,
             "opponents": [
                 "213013057637580800",
-                "322065285899223041"
+                "322065285899223041",
+                "226175837869703169"
             ],
             "pairings": [
                 "213013057637580800",
                 "213013057637580800",
                 "322065285899223041",
-                "226175837869703169"
+                "226175837869703169",
+                "291622788949737473"
             ],
             "received_bye": false,
             "role": "battler",
             "standings": {
                 "game_losses": 0,
                 "game_losses_nonbounty": 0,
-                "game_wins": 2,
+                "game_wins": 4,
                 "game_wins_nonbounty": 0,
                 "losses": 1,
                 "losses_nonbounty": 0,
-                "points": 11,
-                "wins": 1,
+                "points": 17,
+                "wins": 2,
                 "wins_nonbounty": 0
             }
         },
@@ -356,23 +447,25 @@
             "opponents": [
                 "373445222832537600",
                 "325886028294389760",
-                "226175837869703169"
+                "226175837869703169",
+                "203788335297069056"
             ],
             "pairings": [
                 "373445222832537600",
                 "373445222832537600",
-                "325886028294389760"
+                "325886028294389760",
+                "226175837869703169"
             ],
             "received_bye": true,
             "role": "battler",
             "standings": {
-                "game_losses": 2,
-                "game_losses_nonbounty": 7,
-                "game_wins": 0,
+                "game_losses": 4,
+                "game_losses_nonbounty": 9,
+                "game_wins": 1,
                 "game_wins_nonbounty": 10,
-                "losses": 1,
-                "losses_nonbounty": 2,
-                "points": 18,
+                "losses": 2,
+                "losses_nonbounty": 3,
+                "points": 23,
                 "wins": 1,
                 "wins_nonbounty": 4
             }
@@ -420,26 +513,31 @@
             "dropped": false,
             "opponents": [
                 "325886028294389760",
-                "175332744732082178"
+                "175332744732082178",
+                "203788335297069056",
+                "322065285899223041",
+                "693248438875455488",
+                "226175837869703169"
             ],
             "pairings": [
                 "325886028294389760",
                 "325886028294389760",
                 "175332744732082178",
-                "693248438875455488"
+                "693248438875455488",
+                "373445222832537600"
             ],
             "received_bye": false,
             "role": "battler",
             "standings": {
                 "game_losses": 1,
-                "game_losses_nonbounty": 0,
+                "game_losses_nonbounty": 5,
                 "game_wins": 2,
-                "game_wins_nonbounty": 0,
+                "game_wins_nonbounty": 6,
                 "losses": 0,
-                "losses_nonbounty": 0,
-                "points": 12,
-                "wins": 2,
-                "wins_nonbounty": 0
+                "losses_nonbounty": 2,
+                "points": 29,
+                "wins": 3,
+                "wins_nonbounty": 2
             }
         },
         "203788335297069056": {
@@ -455,7 +553,11 @@
                 "322065285899223041",
                 "226175837869703169",
                 "338200782119632897",
-                "325886028294389760"
+                "325886028294389760",
+                "1090533210116608010",
+                "181628580055351296",
+                "162114243557195776",
+                "345443276930678794"
             ],
             "pairings": [
                 "226175837869703169"
@@ -464,14 +566,14 @@
             "role": "jammer",
             "standings": {
                 "game_losses": 0,
-                "game_losses_nonbounty": 7,
+                "game_losses_nonbounty": 15,
                 "game_wins": 0,
-                "game_wins_nonbounty": 8,
+                "game_wins_nonbounty": 19,
                 "losses": 0,
-                "losses_nonbounty": 3,
-                "points": 18,
+                "losses_nonbounty": 6,
+                "points": 34,
                 "wins": 0,
-                "wins_nonbounty": 3
+                "wins_nonbounty": 7
             }
         },
         "213013057637580800": {
@@ -484,7 +586,8 @@
             "dropped": false,
             "opponents": [
                 "125788378607255552",
-                "325886028294389760"
+                "325886028294389760",
+                "291622788949737473"
             ],
             "pairings": [
                 "125788378607255552",
@@ -492,16 +595,16 @@
                 "325886028294389760",
                 "291622788949737473"
             ],
-            "received_bye": false,
+            "received_bye": true,
             "role": "battler",
             "standings": {
                 "game_losses": 4,
                 "game_losses_nonbounty": 2,
                 "game_wins": 0,
                 "game_wins_nonbounty": 0,
-                "losses": 2,
+                "losses": 3,
                 "losses_nonbounty": 1,
-                "points": 10,
+                "points": 15,
                 "wins": 0,
                 "wins_nonbounty": 0
             }
@@ -524,26 +627,29 @@
                 "203788335297069056",
                 "1090533210116608010",
                 "338200782119632897",
-                "345443276930678794"
+                "345443276930678794",
+                "125788378607255552",
+                "181628580055351296"
             ],
             "pairings": [
                 "203788335297069056",
                 "291622788949737473",
                 "345443276930678794",
-                "125788378607255552"
+                "125788378607255552",
+                "162114243557195776"
             ],
             "received_bye": false,
             "role": "battler",
             "standings": {
-                "game_losses": 2,
-                "game_losses_nonbounty": 18,
+                "game_losses": 4,
+                "game_losses_nonbounty": 33,
                 "game_wins": 3,
-                "game_wins_nonbounty": 23,
-                "losses": 1,
-                "losses_nonbounty": 7,
-                "points": 43,
+                "game_wins_nonbounty": 29,
+                "losses": 2,
+                "losses_nonbounty": 14,
+                "points": 52,
                 "wins": 1,
-                "wins_nonbounty": 8
+                "wins_nonbounty": 9
             }
         },
         "237117537404452874": {
@@ -582,26 +688,28 @@
             "dropped": false,
             "opponents": [
                 "226175837869703169",
-                "338200782119632897"
+                "338200782119632897",
+                "213013057637580800"
             ],
             "pairings": [
                 "237117537404452874",
                 "226175837869703169",
                 "338200782119632897",
-                "213013057637580800"
+                "213013057637580800",
+                "125788378607255552"
             ],
             "received_bye": false,
             "role": "battler",
             "standings": {
                 "game_losses": 3,
-                "game_losses_nonbounty": 9,
+                "game_losses_nonbounty": 10,
                 "game_wins": 2,
-                "game_wins_nonbounty": 4,
+                "game_wins_nonbounty": 6,
                 "losses": 1,
                 "losses_nonbounty": 4,
-                "points": 12,
-                "wins": 1,
-                "wins_nonbounty": 1
+                "points": 19,
+                "wins": 2,
+                "wins_nonbounty": 2
             }
         },
         "315488284723904512": {
@@ -641,26 +749,29 @@
                 "345443276930678794",
                 "203788335297069056",
                 "125788378607255552",
-                "325886028294389760"
+                "325886028294389760",
+                "338200782119632897",
+                "181628580055351296"
             ],
             "pairings": [
                 "345443276930678794",
                 "345443276930678794",
                 "125788378607255552",
-                "338200782119632897"
+                "338200782119632897",
+                "1090533210116608010"
             ],
             "received_bye": false,
             "role": "battler",
             "standings": {
-                "game_losses": 0,
-                "game_losses_nonbounty": 6,
-                "game_wins": 2,
-                "game_wins_nonbounty": 8,
+                "game_losses": 1,
+                "game_losses_nonbounty": 8,
+                "game_wins": 4,
+                "game_wins_nonbounty": 16,
                 "losses": 0,
                 "losses_nonbounty": 1,
-                "points": 25,
-                "wins": 2,
-                "wins_nonbounty": 4
+                "points": 38,
+                "wins": 3,
+                "wins_nonbounty": 8
             }
         },
         "325886028294389760": {
@@ -678,26 +789,29 @@
                 "162114243557195776",
                 "213013057637580800",
                 "203788335297069056",
-                "322065285899223041"
+                "322065285899223041",
+                "345443276930678794",
+                "1090533210116608010"
             ],
             "pairings": [
                 "181628580055351296",
                 "181628580055351296",
                 "213013057637580800",
-                "162114243557195776"
+                "162114243557195776",
+                "668881577656320001"
             ],
             "received_bye": false,
             "role": "battler",
             "standings": {
-                "game_losses": 2,
-                "game_losses_nonbounty": 12,
-                "game_wins": 3,
-                "game_wins_nonbounty": 12,
+                "game_losses": 3,
+                "game_losses_nonbounty": 25,
+                "game_wins": 5,
+                "game_wins_nonbounty": 26,
                 "losses": 1,
-                "losses_nonbounty": 4,
-                "points": 31,
-                "wins": 1,
-                "wins_nonbounty": 5
+                "losses_nonbounty": 8,
+                "points": 46,
+                "wins": 2,
+                "wins_nonbounty": 11
             }
         },
         "338200782119632897": {
@@ -714,24 +828,26 @@
                 "226175837869703169",
                 "1090533210116608010",
                 "203788335297069056",
-                "345443276930678794"
+                "345443276930678794",
+                "322065285899223041"
             ],
             "pairings": [
                 "291622788949737473",
-                "322065285899223041"
+                "322065285899223041",
+                "693248438875455488"
             ],
             "received_bye": true,
             "role": "battler",
             "standings": {
-                "game_losses": 0,
-                "game_losses_nonbounty": 5,
-                "game_wins": 2,
-                "game_wins_nonbounty": 13,
-                "losses": 0,
-                "losses_nonbounty": 1,
-                "points": 30,
+                "game_losses": 2,
+                "game_losses_nonbounty": 9,
+                "game_wins": 3,
+                "game_wins_nonbounty": 20,
+                "losses": 1,
+                "losses_nonbounty": 2,
+                "points": 38,
                 "wins": 2,
-                "wins_nonbounty": 6
+                "wins_nonbounty": 9
             }
         },
         "345443276930678794": {
@@ -746,25 +862,28 @@
                 "322065285899223041",
                 "338200782119632897",
                 "226175837869703169",
-                "1090533210116608010"
+                "1090533210116608010",
+                "325886028294389760",
+                "203788335297069056"
             ],
             "pairings": [
                 "322065285899223041",
                 "322065285899223041",
-                "226175837869703169"
+                "226175837869703169",
+                "875582542445674546"
             ],
             "received_bye": true,
             "role": "battler",
             "standings": {
                 "game_losses": 4,
-                "game_losses_nonbounty": 2,
+                "game_losses_nonbounty": 7,
                 "game_wins": 0,
-                "game_wins_nonbounty": 2,
+                "game_wins_nonbounty": 5,
                 "losses": 2,
-                "losses_nonbounty": 1,
-                "points": 17,
-                "wins": 0,
-                "wins_nonbounty": 1
+                "losses_nonbounty": 3,
+                "points": 27,
+                "wins": 1,
+                "wins_nonbounty": 2
             }
         },
         "373445222832537600": {
@@ -777,24 +896,26 @@
             "dropped": false,
             "opponents": [
                 "162114243557195776",
-                "693248438875455488"
+                "693248438875455488",
+                "1090533210116608010"
             ],
             "pairings": [
                 "162114243557195776",
                 "162114243557195776",
                 "693248438875455488",
-                "1090533210116608010"
+                "1090533210116608010",
+                "181628580055351296"
             ],
             "received_bye": false,
             "role": "battler",
             "standings": {
-                "game_losses": 0,
+                "game_losses": 2,
                 "game_losses_nonbounty": 2,
-                "game_wins": 4,
+                "game_wins": 5,
                 "game_wins_nonbounty": 1,
-                "losses": 0,
+                "losses": 1,
                 "losses_nonbounty": 1,
-                "points": 12,
+                "points": 17,
                 "wins": 2,
                 "wins_nonbounty": 0
             }
@@ -809,25 +930,27 @@
             "dropped": false,
             "opponents": [
                 "95591239100928000",
-                "1090533210116608010"
+                "1090533210116608010",
+                "875582542445674546"
             ],
             "pairings": [
                 "95591239100928000",
                 "95591239100928000",
                 "1090533210116608010",
-                "875582542445674546"
+                "875582542445674546",
+                "325886028294389760"
             ],
             "received_bye": false,
             "role": "battler",
             "standings": {
                 "game_losses": 2,
                 "game_losses_nonbounty": 0,
-                "game_wins": 1,
+                "game_wins": 3,
                 "game_wins_nonbounty": 0,
                 "losses": 1,
                 "losses_nonbounty": 0,
-                "points": 11,
-                "wins": 1,
+                "points": 17,
+                "wins": 2,
                 "wins_nonbounty": 0
             }
         },
@@ -842,13 +965,15 @@
             "opponents": [
                 "175332744732082178",
                 "226175837869703169",
-                "373445222832537600"
+                "373445222832537600",
+                "181628580055351296"
             ],
             "pairings": [
                 "175332744732082178",
                 "175332744732082178",
                 "373445222832537600",
-                "181628580055351296"
+                "181628580055351296",
+                "338200782119632897"
             ],
             "received_bye": false,
             "role": "battler",
@@ -857,9 +982,9 @@
                 "game_losses_nonbounty": 2,
                 "game_wins": 2,
                 "game_wins_nonbounty": 1,
-                "losses": 1,
+                "losses": 2,
                 "losses_nonbounty": 1,
-                "points": 14,
+                "points": 19,
                 "wins": 1,
                 "wins_nonbounty": 0
             }
@@ -874,24 +999,26 @@
             "dropped": false,
             "opponents": [
                 "1090533210116608010",
-                "95591239100928000"
+                "95591239100928000",
+                "668881577656320001"
             ],
             "pairings": [
                 "1090533210116608010",
                 "1090533210116608010",
                 "95591239100928000",
-                "668881577656320001"
+                "668881577656320001",
+                "345443276930678794"
             ],
             "received_bye": false,
             "role": "battler",
             "standings": {
-                "game_losses": 2,
+                "game_losses": 4,
                 "game_losses_nonbounty": 0,
                 "game_wins": 0,
                 "game_wins_nonbounty": 0,
-                "losses": 1,
+                "losses": 2,
                 "losses_nonbounty": 0,
-                "points": 11,
+                "points": 16,
                 "wins": 1,
                 "wins_nonbounty": 0
             }
